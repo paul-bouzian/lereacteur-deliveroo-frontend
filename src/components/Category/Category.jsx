@@ -5,13 +5,13 @@ function Categories({ name, meals }) {
       <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2">
         {meals.map((meal) => (
           <article
-            className="h-card flex items-center justify-between gap-3 rounded-lg bg-white p-4 transition-shadow duration-300 hover:cursor-pointer hover:shadow-xl"
+            className="flex h-card items-center justify-between gap-3 rounded-lg bg-white p-4 shadow-sm transition-shadow duration-300 hover:cursor-pointer hover:shadow-xl"
             key={meal.title}
           >
-            <div className="flex h-full flex-col items-start gap-3">
+            <div className="flex h-full flex-col items-start gap-2">
               <h3 className="text-xl">{meal.title}</h3>
               {meal.description && (
-                <p className="overflow-hidden text-sm text-gray-500">
+                <p className="h-10 overflow-hidden text-ellipsis text-sm text-gray-500">
                   {meal.description}
                 </p>
               )}
