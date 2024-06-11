@@ -1,10 +1,11 @@
-
 # Projet Frontend
 
 ## Description
+
 Ce projet est une application front-end utilisant React et configurée avec Vite. Il comprend une gestion des catégories et des articles, ainsi qu'un panier.
 
 ## Structure du projet
+
 - **index.html** : Fichier HTML principal.
 - **tailwind.config.js** : Configuration de Tailwind CSS.
 - **vite.config.js** : Configuration de Vite.
@@ -28,35 +29,45 @@ Ce projet est une application front-end utilisant React et configurée avec Vite
 - **assets/** : Dossier contenant les ressources (icônes, polices, etc.).
 
 ## Installation
+
 1. Clonez le dépôt : `git clone <URL_du_dépôt>`
 2. Accédez au dossier du projet : `cd frontend`
 3. Installez les dépendances : `npm install`
 
 ## Développement
+
 Pour lancer le serveur de développement :
+
 ```
 npm run dev
 ```
 
 ## Production
+
 Pour construire le projet pour la production :
+
 ```
 npm run build
 ```
 
 ## Linting
+
 Pour analyser le code avec ESLint :
+
 ```
 npm run lint
 ```
 
 ## Tests
+
 Pour exécuter les tests :
+
 ```
 npm run test
 ```
 
 ## Contribution
+
 1. Forkez le projet
 2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
 3. Commitez vos modifications (`git commit -m 'Add some AmazingFeature'`)
@@ -64,4 +75,5 @@ npm run test
 5. Ouvrez une Pull Request
 
 ## Licence
+
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
