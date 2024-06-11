@@ -2,7 +2,7 @@ import Articles from "./Articles/Articles";
 
 function Cart({ cart, setCart }) {
   return (
-    <div className="w-[350px]">
+    <div className="w-[350px] max-tablet:hidden">
       <div className="sticky top-0 pt-6">
         <div className="flex w-full flex-col items-center rounded bg-white p-3 shadow-md">
           <button

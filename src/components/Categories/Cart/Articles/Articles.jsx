@@ -28,12 +28,12 @@ function Articles({ cart, setCart }) {
   };
 
   return (
-    <div className="flex w-full flex-col gap-4 divide-y divide-gray-300">
-      <div className="mt-4 flex w-full flex-col gap-6">
+    <div className="flex max-h-[850px] w-full flex-col gap-4 divide-y divide-gray-300">
+      <div className="mt-4 flex w-full flex-col gap-6 overflow-auto">
         {cart.map((item) => (
           <div
             key={item.id}
-            className="flex w-full justify-between gap-6 text-gray-600"
+            className="flex w-full flex-shrink-0 justify-between gap-6 text-gray-600"
           >
             <div className="flex gap-2">
               <div className="flex gap-1">
