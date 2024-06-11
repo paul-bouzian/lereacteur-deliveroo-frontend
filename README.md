@@ -1,4 +1,4 @@
-# Projet Frontend
+# Projet Frontend Deliveroo
 
 ## Description
 
@@ -25,7 +25,7 @@ Ce projet est une application front-end utilisant React et configurée avec Vite
       - **Cart/** : Dossier contenant les composants liés au panier.
         - **Cart.jsx** : Composant pour afficher le panier.
         - **Articles.jsx** : Composant pour afficher les articles du panier.
-        - **MinusCart.jsx** : Composant pour réduire la quantité d'articles dans le panier.
+        - **MinusCart.jsx** : Composant pour afficher le panier en bas de l'écran sur un appareil mobile
 - **assets/** : Dossier contenant les ressources (icônes, polices, etc.).
 
 ## Installation
