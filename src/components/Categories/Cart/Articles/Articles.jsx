@@ -27,6 +27,10 @@ function Articles({ cart, setCart }) {
     setCart(newCart);
   };
 
+  const calcTotalPrice = () => {
+    return cart.reduce((acc, item) => acc + item.totalPrice, 0);
+  };
+
   return (
     <div className="flex max-h-[850px] w-full flex-col gap-4 divide-y divide-gray-300">
       <div className="mt-4 flex w-full flex-col gap-6 overflow-auto">
@@ -57,7 +61,7 @@ function Articles({ cart, setCart }) {
         <div className="flex items-center justify-between">
           <p>Sous-total</p>
           <p>
-            {cart.reduce((acc, item) => acc + item.totalPrice, 0).toFixed(2)}
+            {calcTotalPrice().toFixed(2)}
             &nbsp;€
           </p>
         </div>
@@ -69,9 +73,7 @@ function Articles({ cart, setCart }) {
       <div className="flex w-full items-center justify-between pt-4 text-xl font-medium">
         <p>Total</p>
         <p>
-          {(
-            Number(cart.reduce((acc, item) => acc + item.totalPrice, 0)) + 2.5
-          ).toFixed(2)}
+          {(calcTotalPrice() + 2.5).toFixed(2)}
           &nbsp;€
         </p>
       </div>

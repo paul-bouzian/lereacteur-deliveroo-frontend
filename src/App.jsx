@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import "./assets/fonts/stylesheet.css";
 import Categories from "./components/Categories/Categories";
+import MinusCart from "./components/Categories/MinusCart";
 import Header from "./components/Header";
 import Restaurant from "./components/Restaurant";
 
 function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     axios
@@ -49,7 +51,8 @@ function App() {
     <>
       <Header />
       <Restaurant restaurant={data.restaurant} />
-      <Categories categories={data.categories} />
+      <Categories categories={data.categories} cart={cart} setCart={setCart} />
+      <MinusCart cart={cart} setCart={setCart} />
     </>
   );
 }

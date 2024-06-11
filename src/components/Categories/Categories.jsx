@@ -1,9 +1,7 @@
-import { useState } from "react";
 import Cart from "./Cart/Cart";
 import Category from "./Category/Category";
 
-function Categories({ categories }) {
-  const [cart, setCart] = useState([]);
+function Categories({ categories, cart, setCart}) {
   console.log(cart);
 
   return (
