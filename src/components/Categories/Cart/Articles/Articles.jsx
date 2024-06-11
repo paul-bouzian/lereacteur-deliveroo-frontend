@@ -1,4 +1,4 @@
-function Articles({ cart, setCart, minusCartScroll }) {
+function Articles({ cart, setCart, minusCartScroll, setCartClosed }) {
   const removeFromCart = (item) => {
     const newCart = [...cart];
     const index = newCart.findIndex((cartItem) => cartItem.id === item.id);
@@ -8,6 +8,7 @@ function Articles({ cart, setCart, minusCartScroll }) {
       newCart[index].totalPrice -= item.price;
     } else {
       newCart.splice(index, 1);
+      if (newCart.length === 0) setCartClosed(true);
     }
 
     setCart(newCart);

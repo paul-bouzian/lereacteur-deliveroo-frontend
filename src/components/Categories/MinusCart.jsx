@@ -18,7 +18,12 @@ function MinusCart({ cart, setCart }) {
   return (
     <div className="shadow-up-lg sticky bottom-0 flex flex-col items-center gap-2 bg-white p-4 tablet:hidden">
       {!cartClosed && (
-        <Articles cart={cart} setCart={setCart} minusCartScroll={true} />
+        <Articles
+          cart={cart}
+          setCart={setCart}
+          minusCartScroll={true}
+          setCartClosed={setCartClosed}
+        />
       )}
       <button
         className={`flex h-[60px] w-full cursor-default items-center justify-center rounded p-4 text-sm text-white ${buttonColor} ${cart.length > 0 && "justify-between hover:cursor-pointer"}`}
