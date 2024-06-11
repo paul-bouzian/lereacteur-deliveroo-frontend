@@ -1,4 +1,4 @@
-function Articles({ cart, setCart }) {
+function Articles({ cart, setCart, minusCartScroll }) {
   const removeFromCart = (item) => {
     const newCart = [...cart];
     const index = newCart.findIndex((cartItem) => cartItem.id === item.id);
@@ -32,7 +32,9 @@ function Articles({ cart, setCart }) {
   };
 
   return (
-    <div className="flex max-h-[850px] w-full flex-col gap-4 divide-y divide-gray-300">
+    <div
+      className={`flex w-full flex-col gap-4 divide-y divide-gray-300 ${minusCartScroll ? "max-h-[550px]" : "max-h-[850px]"}`}
+    >
       <div className="mt-4 flex w-full flex-col gap-6 overflow-auto">
         {cart.map((item) => (
           <div

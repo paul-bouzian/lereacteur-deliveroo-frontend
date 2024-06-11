@@ -11,7 +11,7 @@ function Cart({ cart, setCart }) {
             Valider mon panier
           </button>
           {cart.length > 0 ? (
-            <Articles cart={cart} setCart={setCart} />
+            <Articles cart={cart} setCart={setCart} minusCartScroll={false} />
           ) : (
             <div className="flex h-[110px] w-full items-center justify-center">
               <p className="text-gray-400">Votre panier est vide</p>
