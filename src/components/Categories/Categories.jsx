@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Cart from "./Cart";
-import Category from "./Category";
+import Cart from "./Cart/Cart";
+import Category from "./Category/Category";
 
 function Categories({ categories }) {
   const [cart, setCart] = useState([]);

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
 import "./assets/fonts/stylesheet.css";
-import Categories from "./components/Category/Categories";
+import Categories from "./components/Categories/Categories";
 import Header from "./components/Header";
 import Restaurant from "./components/Restaurant";
 

@@ -42,15 +42,15 @@ function Cart({ cart, setCart }) {
                 {cart.map((item) => (
                   <div
                     key={item.id}
-                    className="flex w-full items-center justify-between gap-6 text-gray-600"
+                    className="flex w-full justify-between gap-6 text-gray-600"
                   >
-                    <div className="flex items-center gap-2">
-                      <div className="flex items-center gap-1">
+                    <div className="flex gap-2">
+                      <div className="flex gap-1">
                         <i
                           className="icon-minus cursor-pointer text-xl text-teal-400"
                           onClick={() => removeFromCart(item)}
                         ></i>
-                        <p>{item.quantity}</p>
+                        <p className="pt-[2px]">{item.quantity}</p>
                         <i
                           className="icon-plus cursor-pointer text-xl text-teal-400"
                           onClick={() => addToCart(item)}
