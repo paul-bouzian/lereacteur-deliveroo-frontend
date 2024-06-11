@@ -34,7 +34,7 @@ function Articles({ cart, setCart, minusCartScroll, setCartClosed }) {
 
   return (
     <div
-      className={`flex w-full flex-col gap-4 divide-y divide-gray-300 ${minusCartScroll ? "max-h-[550px]" : "max-h-[850px]"}`}
+      className={`flex w-full flex-col gap-4 divide-y divide-gray-300 ${minusCartScroll ? "max-h-[50vh]" : "max-h-[80vh]"}`}
     >
       <div className="mt-4 flex w-full flex-col gap-6 overflow-auto">
         {cart.map((item) => (
