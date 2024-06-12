@@ -1,7 +1,7 @@
 import Cart from "./Cart/Cart";
 import Category from "./Category/Category";
 
-function Categories({ categories, cart, setCart}) {
+function Categories({ categories, cart, setCart, setCartClosed }) {
   console.log(cart);
 
   return (
@@ -21,7 +21,7 @@ function Categories({ categories, cart, setCart}) {
               ),
           )}
         </div>
-        <Cart cart={cart} setCart={setCart} />
+        <Cart cart={cart} setCart={setCart} setCartClosed={setCartClosed} />
       </div>
     </main>
   );

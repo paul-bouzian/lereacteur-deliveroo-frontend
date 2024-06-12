@@ -11,6 +11,7 @@ function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [cart, setCart] = useState([]);
+  const [cartClosed, setCartClosed] = useState(true);
 
   useEffect(() => {
     axios
@@ -51,8 +52,18 @@ function App() {
     <>
       <Header />
       <Restaurant restaurant={data.restaurant} />
-      <Categories categories={data.categories} cart={cart} setCart={setCart} />
-      <MinusCart cart={cart} setCart={setCart} />
+      <Categories
+        categories={data.categories}
+        cart={cart}
+        setCart={setCart}
+        setCartClosed={setCartClosed}
+      />
+      <MinusCart
+        cart={cart}
+        setCart={setCart}
+        cartClosed={cartClosed}
+        setCartClosed={setCartClosed}
+      />
     </>
   );
 }

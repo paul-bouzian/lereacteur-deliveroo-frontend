@@ -1,9 +1,6 @@
-import { useState } from "react";
 import Articles from "./Cart/Articles/Articles";
 
-function MinusCart({ cart, setCart }) {
-  const [cartClosed, setCartClosed] = useState(true);
-
+function MinusCart({ cart, setCart, cartClosed, setCartClosed }) {
   const buttonColor =
     cart.length > 0 ? "bg-fuchsia-900 hover:bg-fuchsia-800" : "bg-gray-300";
 
@@ -16,7 +13,7 @@ function MinusCart({ cart, setCart }) {
   };
 
   return (
-    <div className="shadow-up-lg sticky bottom-0 flex flex-col items-center gap-2 bg-white p-4 tablet:hidden">
+    <div className="sticky bottom-0 flex flex-col items-center gap-2 bg-white p-4 shadow-up-lg tablet:hidden">
       {!cartClosed && (
         <Articles
           cart={cart}
@@ -38,7 +35,7 @@ function MinusCart({ cart, setCart }) {
 
         <span>{cartClosed ? "Voir le panier" : "Valider mon panier"}</span>
         {cart.length > 0 && (
-          <span>{calculateTotalPrice().toFixed(2)}&nbsp;€</span>
+          <span>{(calculateTotalPrice() + 2.5).toFixed(2)}&nbsp;€</span>
         )}
       </button>
     </div>

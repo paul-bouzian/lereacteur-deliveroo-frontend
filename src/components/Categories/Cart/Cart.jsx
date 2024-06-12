@@ -1,6 +1,6 @@
 import Articles from "./Articles/Articles";
 
-function Cart({ cart, setCart }) {
+function Cart({ cart, setCart, setCartClosed }) {
   return (
     <div className="w-[350px] max-tablet:hidden">
       <div className="sticky top-0 pt-6">
@@ -11,7 +11,12 @@ function Cart({ cart, setCart }) {
             Valider mon panier
           </button>
           {cart.length > 0 ? (
-            <Articles cart={cart} setCart={setCart} minusCartScroll={false} />
+            <Articles
+              cart={cart}
+              setCart={setCart}
+              minusCartScroll={false}
+              setCartClosed={setCartClosed}
+            />
           ) : (
             <div className="flex h-[110px] w-full items-center justify-center">
               <p className="text-gray-400">Votre panier est vide</p>
